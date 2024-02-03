@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NCTS</title>
+        <style>
+        body {
+            margin: 0; /* Remove default margin */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 100% of the viewport height */
+            overflow: hidden; /* Hide overflowing content */
+            background-color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            color: white;
+            font-size: 23px;
+        }
+
+        nav {
+            width: 50%;
+            text-align: right;
+            font-weight: bold;
+            color: aqua;
+        }
+
+        /* Animated background */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind other content */
+        }
+
+        /* Animation keyframes */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            margin: 0; /* Remove default margin */
+        }
+
+        nav {
+            font-weight: bold;
+            color: blueviolet;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: blueviolet;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="animated-background"></div>
+        <h1>No Code To Speech</h1>
+        <nav>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+        <script>
+        // JavaScript to dynamically set the background animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const animatedBackground = document.querySelector('.animated-background');
+            animatedBackground.style.backgroundImage = 'linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
+            animatedBackground.style.backgroundSize = '400% 400%';
+            animatedBackground.style.animation = 'gradientAnimation 10s ease infinite';
+        });
+        </script>
+    </body>
+</html>
