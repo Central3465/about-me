@@ -54,7 +54,7 @@
         .colorful-button {
                 display: inline-block;
                 padding: 10px 20px;
-                background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background-image: linear-gradient(45deg, red, orange, yellow, green);
                 color: white;
                 font-size: 18px;
                 font-weight: bold;
@@ -66,7 +66,8 @@
             }
 
         .colorful-button:hover {
-            background-image: linear-gradient(45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+            background-image: linear-gradient(45deg, green, yellow, orange, red);
+            transform: scale(1.5) perspective(1px)
         }
     </style>
 </head>
@@ -77,8 +78,11 @@
     <h1>News</h1>
     <div class="news-container">
         <div class="news-article">
-            <h2>Exciting News!</h2>
-            <p>I am excited to release my website public for everyone.</p>
+            <h2>My Discord Bot - MEE4</h2>
+            <p>I have created a Discord Bot called MEE4. MEE4 is an all-in-one Discord bot. <br>
+            It was coded in Discord.js. I will continue working on MEE4, and will soon be making a dashboard for MEE4.
+            </p>
+            <a href="https://discord.com/api/oauth2/authorize?client_id=1203609996844208159&permissions=8&scope=bot%20applications.commands" class="colorful-button">Add MEE4 To Your Discord Server</a>
         </div>
 
         <!-- Add more news articles as needed -->
@@ -89,7 +93,7 @@
         // JavaScript to dynamically set the background animation
         document.addEventListener("DOMContentLoaded", function () {
             const animatedBackground = document.querySelector('.animated-background');
-            animatedBackground.style.backgroundImage = 'linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
+            animatedBackground.style.backgroundImage = 'linear-gradient(45deg, red, orange, yellow, green)';
             animatedBackground.style.backgroundSize = '400% 400%';
             animatedBackground.style.animation = 'gradientAnimation 10s ease infinite';
         });

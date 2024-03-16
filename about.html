@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - NCTS</title>
-</head>
-<style>
+  </head>
+  <style>
     body {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: white;
-        font-size: 23px;
-        text-align: center;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: white;
+      font-size: 23px;
+      text-align: center;
     }
 
     /* Animated background */
     .animated-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place it behind other content */
-        }
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Place it behind other content */
+    }
 
     /* Animation keyframes */
     @keyframes gradientAnimation {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     /* Colorful Button Style */
     .colorful-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-image 0.3s;
-        }
+      display: inline-block;
+      padding: 10px 20px;
+      background-image: linear-gradient(45deg, red, orange, yellow, green);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-image 0.3s;
+    }
 
     .colorful-button:hover {
-        background-image: linear-gradient(45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+      background-image: linear-gradient(45deg, green, yellow, orange, red);
+      transform: scale(1.5) perspective(1px);
     }
-</style>
-<body>
-    <div class="animated-background" style="animation: gradientAnimation 6s ease infinite;"></div>
+  </style>
+  <body>
+    <div
+      class="animated-background"
+      style="animation: gradientAnimation 6s ease infinite"
+    ></div>
     <a href="index.html" class="colorful-button">Back to Homepage</a>
     <h1>About</h1>
-    <p>Experienced website and application developer passionate about crafting seamless digital experiences. <br>Bringing creativity and innovation to every project for optimal user engagement.</p>
+    <p>
+      Hello, <br>
+      I am a FrontEnd Developer, specialising in HTML/CSS. I create entertaining website for personal and business use - mostly as a hobby. <br>
+      I am currently learning to be a BackEnd Dev - which is the server-side role. <br>I already know some JavaScript, Python and PHP, but I'm currently boosting my BackEnd Skills. <br>
+      I have created a Discord Bot called MEE4, which is an all-in-one bot coded in JavaScript. <br>
+      I have also created multiple websites, all posted on my GitHub Profile. <br>
+      This website was made using HTML and CSS by me. The animations was made using JavaScript.
+    </p>
+    <a href="https://github.com/Central3465" class="colorful-button">My GitHub Profile</a>
     <script>
-        // JavaScript to dynamically set the background animation
-        document.addEventListener("DOMContentLoaded", function () {
-            const animatedBackground = document.querySelector('.animated-background');
-            animatedBackground.style.backgroundImage = 'linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
-            animatedBackground.style.backgroundSize = '400% 400%';
-            animatedBackground.style.animation = 'gradientAnimation 10s ease infinite';
-        });
+      // JavaScript to dynamically set the background animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedBackground = document.querySelector(
+          ".animated-background"
+        );
+        animatedBackground.style.backgroundImage =
+          "linear-gradient(45deg, red, orange, yellow, green)";
+        animatedBackground.style.backgroundSize = "400% 400%";
+        animatedBackground.style.animation =
+          "gradientAnimation 10s ease infinite";
+      });
     </script>
-</body>
+  </body>
 </html>
