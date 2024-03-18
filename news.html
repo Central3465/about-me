@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News - CODEDEV</title>
-    <link rel="icon" type="image/x-icon" href="./images/nctsanime.jpg">
+    <link rel="icon" type="image/x-icon" href="./images/nctsanime.jpg" />
     <style>
-        body {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: white;
-            font-size: 23px;
-            text-align: center;
-            margin: 0;
-        }
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: white;
+        font-size: 23px;
+        text-align: center;
+        margin: 0;
+      }
 
-        /* Animated background */
-        .animated-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+      /* Animated background */
+      .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
 
-        /* Animation keyframes */
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+      /* Animation keyframes */
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
         }
-
-        /* News container */
-        .news-container {
-            padding: 50px;
+        50% {
+          background-position: 100% 50%;
         }
-
-        /* News article */
-        .news-article {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
+        100% {
+          background-position: 0% 50%;
         }
+      }
 
-        /* Colorful Button Style */
-        .colorful-button {
-                display: inline-block;
-                padding: 10px 20px;
-                background-image: linear-gradient(45deg, red, orange, yellow, green);
-                color: white;
-                font-size: 18px;
-                font-weight: bold;
-                text-decoration: none;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-image 0.3s;
-            }
+      /* News container */
+      .news-container {
+        padding: 50px;
+      }
 
-        .colorful-button:hover {
-            background-image: linear-gradient(45deg, green, yellow, orange, red);
-            transform: scale(1.5) perspective(1px)
-        }
+      /* News article */
+      .news-article {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      /* Colorful Button Style */
+      .colorful-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-image: linear-gradient(45deg, red, orange, yellow, green);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-image 0.3s;
+      }
+
+      .colorful-button:hover {
+        background-image: linear-gradient(45deg, green, yellow, orange, red);
+        transform: scale(1.5) perspective(1px);
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="animated-background" style="animation: gradientAnimation 6s ease infinite;"></div>
+  <body>
+    <div
+      class="animated-background"
+      style="animation: gradientAnimation 6s ease infinite"
+    ></div>
     <a href="index.html" class="colorful-button">Back to Homepage</a>
     <h1>News</h1>
     <div class="news-container">
-        <div class="news-article">
-            <h2>My Discord Bot - MEE4</h2>
-            <p>I have created a Discord Bot called MEE4. MEE4 is an all-in-one Discord bot. <br>
-            It was coded in Discord.js. I will continue working on MEE4, and will soon be making a dashboard for MEE4.
-            </p>
-            <a href="https://discord.com/api/oauth2/authorize?client_id=1203609996844208159&permissions=8&scope=bot%20applications.commands" class="colorful-button">Add MEE4 To Your Discord Server</a>
-        </div>
+      <div class="news-article">
+        <h2>My Discord Bot - MEE4</h2>
+        <p>
+          I have created a Discord Bot called MEE4. MEE4 is an all-in-one
+          Discord bot. <br />
+          It was coded in Discord.js. I will continue working on MEE4, and will
+          soon be making a dashboard for MEE4.
+        </p>
+        <a
+          target="_blank"
+          href="https://discord.com/api/oauth2/authorize?client_id=1203609996844208159&permissions=8&scope=bot%20applications.commands"
+          class="colorful-button"
+          >Add MEE4 To Your Discord Server</a
+        >
+      </div>
 
-        <!-- Add more news articles as needed -->
-
+      <!-- Add more news articles as needed -->
     </div>
 
     <script>
-        // JavaScript to dynamically set the background animation
-        document.addEventListener("DOMContentLoaded", function () {
-            const animatedBackground = document.querySelector('.animated-background');
-            animatedBackground.style.backgroundImage = 'linear-gradient(45deg, red, orange, yellow, green)';
-            animatedBackground.style.backgroundSize = '400% 400%';
-            animatedBackground.style.animation = 'gradientAnimation 10s ease infinite';
-        });
+      // JavaScript to dynamically set the background animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedBackground = document.querySelector(
+          ".animated-background"
+        );
+        animatedBackground.style.backgroundImage =
+          "linear-gradient(45deg, red, orange, yellow, green)";
+        animatedBackground.style.backgroundSize = "400% 400%";
+        animatedBackground.style.animation =
+          "gradientAnimation 10s ease infinite";
+      });
     </script>
-</body>
-
+  </body>
 </html>

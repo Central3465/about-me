@@ -1,94 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CODEDEV</title>
-        <link rel="icon" type="image/x-icon" href="./images/nctsanime.jpg">
-        <style>
-        body {
-            margin: 0; /* Remove default margin */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh; /* 100% of the viewport height */
-            overflow: hidden; /* Hide overflowing content */
-            background-color: black;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: large;
-            color: white;
-            font-size: 23px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODEDEV</title>
+    <link rel="icon" type="image/x-icon" href="./images/nctsanime.jpg" />
+    <style>
+      body {
+        margin: 0; /* Remove default margin */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* 100% of the viewport height */
+        overflow: hidden; /* Hide overflowing content */
+        background-color: black;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: large;
+        color: white;
+        font-size: 23px;
+      }
 
-        nav {
-            width: 50%;
-            text-align: right;
-            font-weight: bold;
-            color: aqua;
-        }
+      nav {
+        width: 50%;
+        text-align: right;
+        font-weight: bold;
+        color: aqua;
+      }
 
-        /* Animated background */
-        .animated-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place it behind other content */
-        }
+      /* Animated background */
+      .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place it behind other content */
+      }
 
-        /* Animation keyframes */
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+      /* Animation keyframes */
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
         }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 
-        h1 {
-            margin: 0; /* Remove default margin */
-        }
+      h1 {
+        margin: 0; /* Remove default margin */
+      }
 
-        nav {
-            font-weight: bold;
-            color: blueviolet;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 20px;
-        }
+      nav {
+        font-weight: bold;
+        color: blueviolet;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+      }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin-right: 15px;
-            transition: color 0.3s;
-        }
+      nav a {
+        text-decoration: none;
+        color: #333;
+        margin-right: 15px;
+        transition: color 0.3s;
+      }
 
-        nav a:hover {
-            color: blueviolet;
-        }
-        </style>
-    </head>
-    <body>
-        <div class="animated-background"></div>
-        <h1>CODEDEV | xba_ii</h1>
-        <nav>
-            <a href="news.html">News</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </nav>
-        <script>
-        // JavaScript to dynamically set the background animation
-        document.addEventListener("DOMContentLoaded", function () {
-            const animatedBackground = document.querySelector('.animated-background');
-            animatedBackground.style.backgroundImage = 'linear-gradient(45deg, red, orange, yellow, green)';
-            animatedBackground.style.backgroundSize = '400% 400%';
-            animatedBackground.style.animation = 'gradientAnimation 10s ease infinite';
-        });
-        </script>
-    </body>
+      nav a:hover {
+        color: blueviolet;
+      }
+
+      #banner {
+        background-color: orange;
+        color: #333;
+        padding: 5px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #dismiss-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-image: linear-gradient(45deg, red, orange, yellow, green);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-image 0.3s;
+      }
+
+      #dismiss-btn:hover {
+        background-image: linear-gradient(45deg, green, yellow, orange, red);
+        transform: scale(1.5) perspective(1px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner">
+      <h3>Show your Support!</h3>
+      <p>
+        <strong
+          >Please consider supporting CODEDEV's commissions
+          <a target="_blank" href="https://www.patreon.com/NoCodeToSpeech"
+            >here</a
+          >.</strong
+        >
+      </p>
+      <button id="dismiss-btn">Dismiss</button>
+      <script>
+        document
+          .getElementById("dismiss-btn")
+          .addEventListener("click", function () {
+            document.getElementById("banner").style.display = "none";
+          });
+      </script>
+    </div>
+    <div class="animated-background"></div>
+    <h1>CODEDEV | xba_ii</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <script>
+      // JavaScript to dynamically set the background animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedBackground = document.querySelector(
+          ".animated-background"
+        );
+        animatedBackground.style.backgroundImage =
+          "linear-gradient(45deg, red, orange, yellow, green)";
+        animatedBackground.style.backgroundSize = "400% 400%";
+        animatedBackground.style.animation =
+          "gradientAnimation 10s ease infinite";
+      });
+    </script>
+  </body>
 </html>
